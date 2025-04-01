@@ -1,6 +1,9 @@
 from django.shortcuts import render
 import random  # 加入 random 套件
+from django.http import HttpResponse 
 
+def id(request):
+	return HttpRespone("41118123 黃靜棋")
 def dice(request):
    no=random.randint(1,6)   # 1~6
    return render(request,"dice.html",{"no":no})
